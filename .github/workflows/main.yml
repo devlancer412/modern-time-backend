@@ -35,9 +35,9 @@ jobs:
         run: python -m venv venv && source venv/bin/activate &&
           pip install -r requirements.txt
         if: steps.cache-venv.outputs.cache-hit != 'true'
-      # Step 6
-      - name: Activate venv and Run Test
-        run: . venv/bin/activate && pytest
+      # # Step 6
+      # - name: Activate venv and Run Test
+      #   run: . venv/bin/activate && pytest
 
       # Step 7
       - name: Create Zipfile archive of Dependencies
