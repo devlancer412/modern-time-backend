@@ -5,14 +5,14 @@ from operator import and_
 from datetime import datetime
 from jose import jwt
 from pydantic import ValidationError
-from app.dependencies.database_deps import get_db_session
-from app.models.user import User
+from dependencies.database_deps import get_db_session
+from models.user import User
 
-from app.utils import (
+from utils import (
   ALGORITHM,
   JWT_SECRET_KEY
 )
-from app.schemas.auth import TokenPayload
+from schemas.auth import TokenPayload
 
 email_oauth = OAuth2PasswordBearer(
   tokenUrl="auth/login/email",

@@ -1,21 +1,21 @@
-from app.schemas.user import AccessKey
+from schemas.user import AccessKey
 from fastapi import APIRouter, status, HTTPException, Depends, BackgroundTasks
 from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
 from operator import and_
 
-from app.utils import (
+from utils import (
     get_hashed_password,
     create_access_token,
     create_refresh_token,
     verify_password,
     send_email_background
 )
-from app.schemas.user import EmailUserBase
-from app.schemas.auth import TokenSchema
-from app.models.user import User, UserAccessKey
-from app.dependencies.database_deps import get_db_session
-from app.dependencies.auth_deps import get_current_user_from_email_oauth, get_current_user_from_wallet_oauth
+from schemas.user import EmailUserBase
+from schemas.auth import TokenSchema
+from models.user import User, UserAccessKey
+from dependencies.database_deps import get_db_session
+from dependencies.auth_deps import get_current_user_from_email_oauth, get_current_user_from_wallet_oauth
 
 router = APIRouter(
   prefix='/auth',

@@ -1,8 +1,8 @@
 import uvicorn
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
-from app.routes import router as api_router
-from app.db.database import Database, Base
+from routes import router as api_router
+from db.database import Database, Base
 
 database = Database()
 engine = database.get_db_connection()

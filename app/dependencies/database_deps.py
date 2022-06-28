@@ -1,4 +1,4 @@
-from app.db.database import Database
+from db.database import Database
 
 database = Database()
 engine = database.get_db_connection()
