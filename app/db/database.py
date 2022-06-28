@@ -1,8 +1,9 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
+import os
 
-MYSQL_URL = "mysql+pymysql://root@localhost:3306/modern_time?charset=utf8"
+MYSQL_URL = os.getenv('MYSQL_DB_URL') 
 POOL_SIZE = 20
 POOL_RECYCLE = 3600
 POOL_TIMEOUT = 15
