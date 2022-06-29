@@ -3,7 +3,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 import os
 
-MYSQL_URL = os.getenv('MYSQL_DB_URL') 
+MYSQL_URL = "mysql+pymysql://{}:{}@{}:{}/{}?charset=utf8".format(os.getenv('DB_USER'), os.getenv('DB_PASSWORD'), os.getenv('DB_HOST'), os.getenv('DB_PORT'), os.getenv('DATABASE')) 
 POOL_SIZE = 20
 POOL_RECYCLE = 3600
 POOL_TIMEOUT = 15
