@@ -8,7 +8,7 @@ POOL_SIZE = 20
 POOL_RECYCLE = 3600
 POOL_TIMEOUT = 15
 MAX_OVERFLOW = 2
-CONNECT_TIMEOUT = 60
+CONNECT_TIMEOUT = 120
 
 class Database():
   def __init__(self) -> None:
