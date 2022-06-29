@@ -92,7 +92,6 @@ pydantic==1.9.1
 pymongo==4.1.1
 PyMySQL==1.0.2
 pyparsing==3.0.7
-pypiwin32==223
 pyrsistent==0.18.1
 pysha3==1.0.2
 python-dateutil==2.8.2
