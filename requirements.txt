@@ -101,7 +101,6 @@ python-jose==3.3.0
 python-mail==1.0.2
 python-multipart==0.0.5
 pytz==2022.1
-pywin32==304
 PyYAML==6.0
 redis==4.2.1
 replit==3.2.4
