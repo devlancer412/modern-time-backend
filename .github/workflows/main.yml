@@ -40,7 +40,7 @@ jobs:
 
       # Build the app and run tests
       - name: Build and Run Test
-        run: . venv/bin/activate
+        run: . venv/bin/activate && cd app && python -m pytest tests/test_main.py
 
       - name: Create Zipfile archive of Dependencies
         run: |
