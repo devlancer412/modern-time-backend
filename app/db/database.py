@@ -6,9 +6,9 @@ import os
 MYSQL_URL = "mysql+pymysql://{}:{}@{}:{}/{}?charset=utf8".format(os.getenv('DB_USER'), os.getenv('DB_PASSWORD'), os.getenv('DB_HOST'), os.getenv('DB_PORT'), os.getenv('DATABASE')) 
 POOL_SIZE = 20
 POOL_RECYCLE = 3600
-POOL_TIMEOUT = 15
+POOL_TIMEOUT = 150
 MAX_OVERFLOW = 2
-CONNECT_TIMEOUT = 120
+CONNECT_TIMEOUT = 1200
 
 class Database():
   def __init__(self) -> None:
