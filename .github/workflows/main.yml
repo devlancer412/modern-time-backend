@@ -29,9 +29,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-venv-
 
-      - name: Upgrade pip
-        run: python -m pip install --upgrade pip
-
       - name: Activate and Install Depencies into Virtual env
         run: python -m venv venv && source venv/bin/activate &&
           pip install -r requirements.txt

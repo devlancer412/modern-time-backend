@@ -11,6 +11,7 @@ amqp==2.6.1
 anyio==3.6.1
 asgiref==3.5.0
 async-timeout==4.0.2
+atomicwrites==1.4.0
 attrs==21.4.0
 azure-common==1.1.28
 azure-core==1.1.1
@@ -62,6 +63,7 @@ httpcore==0.15.0
 httptools==0.4.0
 httpx==0.23.0
 idna==2.8
+iniconfig==1.1.1
 ipfshttpclient==0.8.0a2
 itsdangerous==2.1.2
 Jinja2==3.1.2
@@ -82,8 +84,10 @@ orjson==3.7.2
 packaging==21.3
 parsimonious==0.8.1
 passlib==1.7.4
+pluggy==1.0.0
 prompt-toolkit==3.0.28
 protobuf==3.19.4
+py==1.11.0
 py-dotenv==0.1
 pyasn1==0.4.8
 pycparser==2.21
@@ -94,6 +98,7 @@ PyMySQL==1.0.2
 pyparsing==3.0.7
 pyrsistent==0.18.1
 pysha3==1.0.2
+pytest==7.1.2
 python-dateutil==2.8.2
 python-dotenv==0.20.0
 python-jose==3.3.0
@@ -114,6 +119,7 @@ SQLAlchemy==1.4.37
 sqlparse==0.4.2
 starlette==0.17.1
 stringcase==1.2.0
+tomli==2.0.1
 toolz==0.11.2
 typing-extensions==3.10.0.2
 tzdata==2022.1
