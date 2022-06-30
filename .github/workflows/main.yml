@@ -25,8 +25,8 @@ jobs:
           aws-region: us-east-1
 
         # Build App and Run Application Test
-      - name: Build Application and Run unit Test
-        run: sudo python3 app/main.py
+      # - name: Build Application and Run unit Test
+      #   run: sudo python3 app/main.py
 
   continuous-deployment:
     runs-on: ubuntu-latest
