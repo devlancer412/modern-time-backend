@@ -7,7 +7,6 @@ __maintainer__ = __author__
 __email__ = "devanderson0412@gmail.com"
 __status__ = "alpha"
 
-from __internal import bootstrap
 import uvicorn
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
@@ -23,8 +22,6 @@ app = FastAPI(
 if __name__ == '__main__':
     uvicorn.run("main:app", host="0.0.0.0", port=80, log_level="info", reload = True)
     print("running")
-    
-bootstrap(app)
 
 database = Database()
 engine = database.get_db_connection()
