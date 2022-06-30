@@ -5,7 +5,7 @@ engine = database.get_db_connection()
 
 # Dependencies
 async def get_db_session():
-  session = database.get_db_session(engine)
+  session = database.get_db_session()
   try:
     yield session
   finally:

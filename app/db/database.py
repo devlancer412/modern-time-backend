@@ -6,9 +6,9 @@ import os
 MYSQL_URL = "mysql+pymysql://{}:{}@{}:{}/{}?charset=utf8".format(os.getenv('DB_USER'), os.getenv('DB_PASSWORD'), os.getenv('DB_HOST'), os.getenv('DB_PORT'), os.getenv('DATABASE')) 
 POOL_SIZE = 20
 POOL_RECYCLE = 3600
-POOL_TIMEOUT = 150
+POOL_TIMEOUT = 15
 MAX_OVERFLOW = 2
-CONNECT_TIMEOUT = 1200
+CONNECT_TIMEOUT = 60
 
 class Database():
   def __init__(self) -> None:
@@ -26,9 +26,9 @@ class Database():
         print("Error connecting to DB : ", ex)
     return self.engine
 
-  def get_db_session(self,engine):
+  def get_db_session(self):
     try:
-      Session = sessionmaker(bind=engine)
+      Session = sessionmaker(bind=self.engine)
       session = Session()
       return session
     except Exception as ex:
