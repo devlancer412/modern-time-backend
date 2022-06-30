@@ -13,6 +13,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
 from routes import router as api_router
 from db.database import Database, Base
+from mangum import Mangum
 
 app = FastAPI(
     title="Modern Time Backend",
@@ -40,3 +41,5 @@ app.add_middleware(
 )
 
 app.include_router(api_router)
+
+handler = Mangum(app=app)
