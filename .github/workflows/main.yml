@@ -26,7 +26,7 @@ jobs:
 
         # Build App and Run Application Test
       - name: Build Application and Run unit Test
-        run: python3 app/main.py
+        run: sudo python3 app/main.py
 
   continuous-deployment:
     runs-on: ubuntu-latest
