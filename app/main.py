@@ -7,13 +7,12 @@ __maintainer__ = __author__
 __email__ = "devanderson0412@gmail.com"
 __status__ = "alpha"
 
-from __internal import bootstrap
+from app.__internal import bootstrap
 import uvicorn
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
 from routes import router as api_router
 from db.database import Database, Base
-
 
 app = FastAPI(
     title="Modern Time Backend",
