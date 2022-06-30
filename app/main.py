@@ -7,7 +7,7 @@ __maintainer__ = __author__
 __email__ = "devanderson0412@gmail.com"
 __status__ = "alpha"
 
-from app.__internal import bootstrap
+from __internal import bootstrap
 import uvicorn
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
