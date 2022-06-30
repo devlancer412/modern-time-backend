@@ -7,12 +7,13 @@ __maintainer__ = __author__
 __email__ = "devanderson0412@gmail.com"
 __status__ = "alpha"
 
+import uvicorn
 from __internal import bootstrap
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
 from routes import router as api_router
 from db.database import Database, Base
-from mangum import Mangum
+
 
 app = FastAPI(
     title="Modern Time Backend",
@@ -20,6 +21,10 @@ app = FastAPI(
     version="-".join([__version__, __status__]),
 )
 
+if __name__ == '__main__':
+    uvicorn.run("main:app", host="0.0.0.0", port=80, log_level="info", reload = True)
+    print("running")
+    
 bootstrap(app)
 
 database = Database()
@@ -36,5 +41,3 @@ app.add_middleware(
 )
 
 app.include_router(api_router)
-
-handler = Mangum(app=app)

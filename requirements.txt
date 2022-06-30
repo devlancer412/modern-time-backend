@@ -1,9 +1,9 @@
 fastapi==0.78.0
 fastapi_mail==1.0.9
 jose==1.0.0
-mangum==0.15.0
 passlib==1.7.4
 pydantic==1.9.1
 python-dotenv==0.20.0
 python_jose==3.3.0
 SQLAlchemy==1.4.37
+uvicorn==0.17.6
